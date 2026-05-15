@@ -1,0 +1,54 @@
+.container {
+    display: grid;
+    min-height: 100vh;
+    /* Definición de 3 columnas: Lado (200px), Centro (Flexible), Lado (200px) */
+    grid-template-columns:  1fr ;
+    /* Definición de filas: Auto para header, Flexible para contenido, Auto para footer */
+    grid-template-rows: auto 1fr auto;
+    
+    /* Asignación de áreas */
+    grid-template-areas: 
+        "header"
+        "content "
+        "footer";
+    
+    gap: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    color: darkslategrey;
+}
+
+.header { grid-area: header; background-color: darkslategrey; color: white; padding: 20px; text-align: left; border-radius: 8px; position: sticky; top: 1%; z-index: 1000;}
+
+.button:hover{background-color: rgb(142, 167, 164);}
+
+.button{
+  display:inline-flex;
+  margin: 15px;
+  background-color: darkslategray;
+  color: white;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.Banner{
+    width: 100%; height: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(/Circuit.jpg); color: white; display: flex; align-items: center; justify-content: center; flex-direction:column; background-attachment: fixed;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  align-self: center;
+  margin: 50px;
+  border: 8px solid white;
+  
+}
