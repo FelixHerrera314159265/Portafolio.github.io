@@ -12,43 +12,253 @@
         "content "
         "footer";
     
-    gap: 15px;
-    padding: 15px;
+    gap: 0px;
+    padding: px;
     box-sizing: border-box;
 }
 
 body {
+    
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: rgb(255, 255, 255);
-    color: darkslategrey;
+    background-color: lavender;
+    color: darkslategray
 }
 
-.header { grid-area: header; background-color: darkslategrey; color: white; padding: 20px; text-align: left; border-radius: 8px; position: sticky; top: 1%; z-index: 1000;}
-
+.header {
+    grid-area: header; 
+    background: rgb(255, 255, 255); 
+    color: darkslategray; 
+    padding: 15px; 
+    text-align: left; 
+    border-top-left-radius: 0%; border-top-right-radius: 0%; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;
+    position: sticky; top: 0; 
+    z-index: 1000; 
+    border-bottom: 4px solid darkslategray;}
 .button:hover{background-color: rgb(142, 167, 164);}
 
 .button{
+  grid-area: header;
   display:inline-flex;
-  margin: 15px;
-  background-color: darkslategray;
-  color: white;
+  place-items: center;     /* Centers both horizontally and vertically */
+  height: 2vh;  
+  margin: 0;
+  flex-direction: row;
+  background-color:none;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 5px;
+  padding: 3px;
   transition: 0.3s;
+  border-right: 2px solid  darkslategray;
+  border-left: 2px solid darkslategray;
 }
 
 .Banner{
-    width: 100%; height: 50%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(/Circuit.jpg); color: white; display: flex; align-items: center; justify-content: center; flex-direction:column; background-attachment: fixed;
+    width: 100%; height: 25%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(/Circuit.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction:column; 
+    background-attachment: fixed; 
+    margin-top: 2vh; margin-bottom: 4vh;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  align-self: center;
-  margin: 50px;
-  border: 8px solid white;
-  
+.Banner img {
+    max-width: 150%;
+    width: 300px;
+    height: auto;
+    align-self: center;
+    margin: 0px;
+    border: 3px solid white;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.Content{
+    background-color: white;
+    padding: 60px; 
+    margin: 70px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    flex-direction:column; 
+    text-align: center;
+    font-size:x-large; 
+    box-shadow: -10px 10px 8px lightslategray;
+     
+}
+.Content img{
+    height: 25%;
+    width:auto;
+}
+
+.Habilidades{
+    background-color: white; 
+    padding: 60px; margin: 70px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    flex-direction:column; 
+    text-align: center;
+    font-size:x-large; 
+    box-shadow: -10px 10px 8px  lightslategray;
+}
+
+.Habilidades_banner{
+    width: 100%; height: 25%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgb(0, 0, 0, 0.7)), url(/Habilidades_Blandas.png);
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    display: flex; align-items: center; justify-content: center; flex-direction:column; background-attachment: fixed; margin-top: 4vh; margin-bottom: 4vh;
+    font-size: xx-large;
+}
+
+.Banner_Contabilidad{
+    width: 100%; height: 25%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(/Contabilidad.png);
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction:column; 
+    background-attachment: fixed; 
+    margin-top: 2vh; margin-bottom: 2vh;
+    font-size: xx-large;
+}
+
+.Banner_Desarrollo_Humano{
+    width: 100%; height: 25%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(/Desarrollo_Humano_y_Profesional.jpg); 
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction:column; 
+    background-attachment: fixed; 
+    margin-top: 2vh; margin-bottom: 2vh;
+    font-size: xx-large;
+}
+
+.Banner_Competencias{
+    width: 100%; height: 25%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(/Competencias.png);
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    background-attachment: fixed;
+    margin-top: 2vh; margin-bottom: 2vh;
+    font-size: xx-large;
+}
+
+.Banner_Proyectos{
+    width: 100%; height: 25%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(/Proyectos.png);
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    background-attachment: fixed;
+    margin-top: 2vh; margin-bottom: 2vh;
+    font-size: xx-large;
+}
+
+.Banner_Metodología_de_la_Investigación{
+    width: 100%; height: 25%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(/Metodología_de_la_Investigación.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    background-attachment: fixed;
+    margin-top: 2vh; margin-bottom: 2vh;
+    font-size: xx-large;
+}
+
+.Banner_Lógica_de_Sistemas{
+    width: 100%; height: 25%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(/Lógica_de_Sistemas.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    background-attachment: fixed;
+    margin-top: 2vh; margin-bottom: 2vh;
+    font-size: xx-large;
+}
+
+.Banner_Introducción_a_Sistemas{
+    width: 100%; height: 25%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(/Sistemas.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    background-attachment: fixed;
+    margin-top: 2vh; margin-bottom: 2vh;
+    font-size: xx-large;
+}
+
+.Course_Information{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    flex-direction:column; 
+    text-align: center;
+    font-size:x-large;
+    padding: 3px;
+}
+
+.Proyectos{
+    background-color: white; 
+    padding: 60px; margin: 70px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    flex-direction:column; 
+    text-align: center;
+    font-size:x-large; 
+    box-shadow: -10px 10px 8px  lightslategray;
+}
+
+.Proyectos img{
+    box-shadow: 0px 10px 8px  lightslategray;
+}
+
+.footer {
+    grid-area: footer; 
+    background: #36454F;
+    color: white; 
+    padding: 55px; 
+    text-align: center; 
+    border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 0%; border-bottom-right-radius: 0%;
+    bottom: 0; 
+    z-index: 1000; 
+    border-top: 4px solid white;
+    font-size: larger;
 }
